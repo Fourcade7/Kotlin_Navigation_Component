@@ -24,16 +24,21 @@ class BlankFragment : Fragment() {
     ): View? {
         binding= FragmentBlankBinding.inflate(inflater, container, false)
 
-        val bundle=Bundle()
-        bundle.putString("key","axaxax")
-
-        binding.button1f1.setOnClickListener {
-            (activity as MainActivity).navController.navigate(R.id.action_blankFragment_to_blankFragment2,bundle)
-        }
         return binding.root
 
 
 
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val bundle=Bundle()
+        bundle.putString("key","axaxax")
+        val navController=Navigation.findNavController(view)
+
+        binding.button1f1.setOnClickListener {
+           navController.navigate(R.id.action_blankFragment_to_blankFragment2,bundle)
+        }
     }
 
 
