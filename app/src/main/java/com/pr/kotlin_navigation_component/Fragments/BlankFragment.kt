@@ -7,6 +7,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.Navigation.findNavController
 import com.pr.kotlin_navigation_component.MainActivity
 import com.pr.kotlin_navigation_component.R
 import com.pr.kotlin_navigation_component.databinding.FragmentBlankBinding
